@@ -10,12 +10,13 @@
 
     <script>
         fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('ip').textContent = data.ip;
+            .then(function(response) {
+              response.json().then(jsonData => {
+                console.log(jsonData);
+              });
             })
-            .catch(error => {
-                document.getElementById('ip').textContent = '取得失敗';
+            .catch(function(error) {
+              console.log(error)
             });
     </script>
 </body>
