@@ -12,8 +12,8 @@
         fetch('https://ipapi.co/json/')
             .then(function(response) {
               response.json().then(jsonData => {
-                  console.log(jsonDate);
-                docment.getElementById('ip').textContent = jsonDate;
+                  console.log(jsonData);
+                docment.getElementById('ip').textContent = jsonData;
               });
             })
             .catch(function(error) {
