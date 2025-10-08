@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>IP取得テスト</title>
+</head>
+<body>
+    <h1>IPアドレス取得テスト</h1>
+    <p>あなたのIPアドレス: <span id="ip">取得中...</span></p>
+
+    <script>
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip').textContent = data.ip;
+            })
+            .catch(error => {
+                document.getElementById('ip').textContent = '取得失敗';
+            });
+    </script>
+</body>
+</html>
