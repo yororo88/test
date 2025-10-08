@@ -13,12 +13,12 @@
             .then(function(response) {
               response.json().then(jsonData => {
                   console.log(jsonData);
-                docment.getElementById('ip').textContent = jsonData;
+                document.getElementById('ip').textContent = jsonData;
               });
             })
             .catch(function(error) {
               console.log(error);
-              docment.getElementById('ip').textContent = error;
+              document.getElementById('ip').textContent = error;
             });
     </script>
 </body>
