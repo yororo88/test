@@ -12,11 +12,13 @@
         fetch('https://ipapi.co/json/')
             .then(function(response) {
               response.json().then(jsonData => {
-                console.log(jsonData);
+                  console.log(jsonDate);
+                docment.getElementById('ip').textContent = jsonDate;
               });
             })
             .catch(function(error) {
-              console.log(error)
+              console.log(error);
+              docment.getElementById('ip').textContent = error;
             });
     </script>
 </body>
