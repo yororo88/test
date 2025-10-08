@@ -13,7 +13,7 @@
             .then(function(response) {
               response.json().then(jsonData => {
                   console.log(jsonData);
-                document.getElementById('ip').textContent = jsonData;
+                document.getElementById('ip').textContent = JSON.stringify(jsonData, null, 2);
               });
             })
             .catch(function(error) {
